@@ -8,7 +8,8 @@ NAME		=	mlx-tutorial
 # DEPS		=	libft/libft.a get_next_line/get_next_line.a
 # INCLUDE		=	-I cub3d.h
 SRCS_		=	main.c \
-				window.c
+				window.c \
+				image.c
 	
 
 SRCS		=	$(addprefix $(_SRC), $(SRCS_))

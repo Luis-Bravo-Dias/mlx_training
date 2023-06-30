@@ -1,6 +1,8 @@
 #ifndef WINDOW_H
 # define WINDOW_H
 # include <mlx.h>
+# include <stdio.h>
+# include <string.h>
 
 typedef struct s_win
 {
@@ -23,6 +25,8 @@ typedef struct s_img
 }	t_img;
 
 
-t_win new_program(int w, int h, char *str);
+t_win 	new_program(int w, int h, char *str);
+t_img	new_img(int w, int h, t_win window);
+void	put_pixel_img(t_img img, int x, int y, int color);
 
 #endif

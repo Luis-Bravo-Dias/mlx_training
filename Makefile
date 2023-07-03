@@ -9,7 +9,8 @@ NAME		=	mlx-tutorial
 # INCLUDE		=	-I cub3d.h
 SRCS_		=	main.c \
 				window.c \
-				image.c
+				image.c \
+				canvas.c
 	
 
 SRCS		=	$(addprefix $(_SRC), $(SRCS_))

@@ -1,4 +1,4 @@
-#include "../window.h"
+#include "../canvas.h"
 
 int	main(void)
 {
@@ -39,13 +39,19 @@ int	main(void)
 	
 		t_img	image;
 		image = new_img(300,300, tutorial);
-		{
-			//put white pixel
+		// {
+		// 	//put white pixel
 
-			put_pixel_img(image, 150, 150, 0x00FFFFFF);
+		// 	put_pixel_img(image, 150, 150, 0x00FFFFFF);
+		// 	mlx_put_image_to_window(image.win.mlx_ptr, image.win.win_ptr, image.img_ptr, 0, 0);
+		// }
+		{
+			//Draw a gigant GREEN square 300x300
+			draw_square((t_square){0, 0, 300, 0x00FF00}, image);
 			mlx_put_image_to_window(image.win.mlx_ptr, image.win.win_ptr, image.img_ptr, 0, 0);
 		}
 	}
+	mlx_hook(tutorial.win_ptr, exit_event, 0, exit_tutorial, &tutorial);
 	mlx_loop(tutorial.mlx_ptr);
 	return (0);
 }
